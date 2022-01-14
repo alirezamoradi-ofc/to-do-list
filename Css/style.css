@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100vh;
+}
+
+header, main{
+    grid-column: 1/13;
+    grid-row: 1/5;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background: linear-gradient(to top right, #f46b45, #eea849);
+}
+
+header h1{
+    grid-column: 1/13;
+    grid-row: 1;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+header input, header button{
+    grid-column: 5/10;
+    grid-row: 2;
+    height: 2em;
+    text-align: right;
+    padding-right: 1em;
+    font-size: x-large;
+    border: none;
+}
+
+header input:focus{
+    outline: none;
+}
+
+header button{
+    grid-column: 4/5;
+    background: #0f0;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding-left: 1em;
+}
+
+main{
+    grid-template-rows: repeat(12, 1fr);
+    grid-row: 5/13;
+    background: #fff;
+}
+
+main ul{
+    grid-column: 3/11;
+    grid-row: 2/13;
+    list-style: none;
+    overflow: auto;
+}
+main ul li{
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    height: 3em;
+    border-radius: 0.5em;
+    background: linear-gradient(to top right, #f46b45, #eea849);
+    padding-right: 2em;
+    font-size: x-large;
+    margin: 0 1em 1em;
+}
+
+#trash{
+    padding-left: 0.8em;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#trash:hover{
+    color: #f00;
+}
